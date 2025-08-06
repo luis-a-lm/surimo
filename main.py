@@ -13,7 +13,7 @@ def get_base64_image(image_path):
     with open(image_path, "rb") as img_file:
         return base64.b64encode(img_file.read()).decode()
 
-# logo_base64 = get_base64_image("my_logo.png")
+logo_base64 = get_base64_image("my_logo.png")
 
 last_updated_str = "1d ago"
 
@@ -34,6 +34,7 @@ st.markdown(
     f"""
     <div style="background-color:#003478;padding:10px 20px;border-bottom:1px solid #ddd;">
         <div style="display:flex;justify-content:space-between;align-items:center;">
+            <img src="data:image/png;base64,{logo_base64}" alt="Logo" width="100" style="margin-right:15px;">
             <h2 style="margin:0;color:white;">SURIMO AI - Automated Supplier Risk Monitor</h2>
             <span style="font-size:0.9em;color:#FFFFFF;">Last updated: {last_updated_str}</span>
         </div>
@@ -405,4 +406,5 @@ if uploaded_file:
 else:
 
     st.warning("📤 Please upload a properly formatted CSV to begin.")
+
 

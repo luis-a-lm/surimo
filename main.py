@@ -13,7 +13,7 @@ def get_base64_image(image_path):
     with open(image_path, "rb") as img_file:
         return base64.b64encode(img_file.read()).decode()
 
-logo_base64 = get_base64_image("my_logo.png")
+# logo_base64 = get_base64_image("my_logo.png")
 
 last_updated_str = "1d ago"
 
@@ -403,4 +403,5 @@ if uploaded_file:
         An LLM with retrieval-augmented generation (RAG) searches the GDELT database for matches, extracts relevant articles, and summarizes the results for each tracked company.
         """)
 else:
+
     st.warning("📤 Please upload a properly formatted CSV to begin.")

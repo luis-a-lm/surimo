@@ -52,7 +52,7 @@ st.markdown(
 )
 
 
-USE_TEST_FILE = True  # Set to False to enable file upload
+USE_TEST_FILE = False  # Set to False to enable file upload
 
 if USE_TEST_FILE:
     uploaded_file = "output.csv"
@@ -405,3 +405,4 @@ if uploaded_file:
 else:
 
     st.warning("📤 Please upload a properly formatted CSV to begin.")
+

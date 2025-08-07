@@ -13,7 +13,7 @@ def get_base64_image(image_path):
     with open(image_path, "rb") as img_file:
         return base64.b64encode(img_file.read()).decode()
 
-logo_base64 = get_base64_image("my_logo.png")
+# logo_base64 = get_base64_image("my_logo.png")
 
 last_updated_str = "1d ago"
 
@@ -406,5 +406,6 @@ if uploaded_file:
 else:
 
     st.warning("📤 Please upload a properly formatted CSV to begin.")
+
 
 
